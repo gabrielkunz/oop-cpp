@@ -2,31 +2,28 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-
 class Account {
  public:
-  Account(string acc_owner, int number_of_accounts);
+  Account(std::string acc_owner, int number_of_accounts);
   void Credit(float amount);
   void Debit(float amount);
   void Transfer(Account* receiving_acc, float amount);
  private:
-  string acc_owner;
+  std::string acc_owner;
   int acc_number;
   float balance;
 };
 
-Account::Account(string acc_owner, int number_of_accounts) {
+Account::Account(std::string acc_owner, int number_of_accounts) {
   this->acc_owner = acc_owner;
   acc_number = number_of_accounts + 1;
   balance = 0;
 
-  cout << "New account created:" << endl;
-  cout << " Owner: " << this->acc_owner << endl;
-  cout << " Account Number: " << acc_number << endl;
-  cout.precision(2);
-  cout << " Balance: R$ " << balance << endl;
+  std::cout << "New account created:" << std::endl;
+  std::cout << " Owner: " << this->acc_owner << std::endl;
+  std::cout << " Account Number: " << acc_number << std::endl;
+  std::cout.precision(2);
+  std::cout << " Balance: R$ " << balance << std::endl;
 }
 
 void Account::Credit(float amount) {
