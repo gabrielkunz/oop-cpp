@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <iostream>
-#include <iomanip>
 #include <string>
 
 using namespace std;
@@ -24,10 +23,10 @@ Account::Account(string acc_owner, int number_of_accounts) {
   balance = 0;
 
   cout << "New account created:" << endl;
-  cout << setw(4) << "Owner: " << this->acc_owner << endl;
-  cout << setw(4) << "Account Number: " << acc_number << endl;
+  cout << " Owner: " << this->acc_owner << endl;
+  cout << " Account Number: " << acc_number << endl;
   cout.precision(2);
-  cout << setw(4) << "Balance: R$ " << balance << endl;
+  cout << " Balance: R$ " << balance << endl;
 }
 
 void Account::Credit(float amount) {
