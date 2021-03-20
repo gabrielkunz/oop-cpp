@@ -36,7 +36,7 @@ void Account::Credit(float amount) {
   std::cout << "Credit operation in account " << acc_number << std::endl;
   std::cout.precision(2);
   std::cout << "Previous balance: R$ " << previous_balance << std::endl;
-  std::cout << "Balance: R$ " << balance << std::endl;
+  std::cout << "New balance: R$ " << balance << std::endl;
   std::cout << "--------------------" << std::endl;
 }
 
