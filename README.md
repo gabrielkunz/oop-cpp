@@ -15,4 +15,4 @@ Bank account class with methods to perform credit, debit and transfer operations
 https://www.mycompiler.io/view/BvWAP5u
 
 ## Program 2: 02_complex/
-Complex number class with methods to get polynomial and polar parts and to perform mathematical operations.
+Complex number class with methods to get polynomial and polar parts and perform mathematical operations.
