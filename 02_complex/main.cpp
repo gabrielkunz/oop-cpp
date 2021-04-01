@@ -25,3 +25,32 @@ class Complex {
     float abs_value;
     float phase;
 };
+
+Complex::Complex() {
+   real_part = 0;
+   imaginary_part = 0;
+}
+
+class ArrayComplex {
+ public:
+   ArrayComplex(int num);
+   ~ArrayComplex();
+   int getSize();
+ private:
+   Complex * elements;
+   int size;
+};
+
+ArrayComplex::ArrayComplex(int num){
+   elements = new Complex[num];
+   size = num;
+}
+
+ArrayComplex::~ArrayComplex(){
+   delete [] elements;
+   std::cout << "object deleted by destructor;" << std::endl;
+}
+
+int ArrayComplex::getSize(){
+   return size;
+}
