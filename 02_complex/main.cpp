@@ -5,16 +5,20 @@
 class Complex {
  public:
     Complex();
-    float GetRealPart();
-    float GetImaginaryPart();
-    float GetAbsoluteValue();
-    float GetPhase();
-    float Sum(Complex* num);
-    float Subtract(Complex* num);
-    float Multiply(Complex* num);
-    float Divide(Complex* num);
-    std::string GetRectangularForm();
-    std::string GetPolarForm();
+    float getRealPart();
+    float getImaginaryPart();
+    float getAbsoluteValue();
+    float getPhase();
+    float setRealPart(float real_part);
+    float setImaginaryPart(float imaginary_part);
+    float setAbsoluteValue(float abs_value);
+    float setPhase(float phase);
+    float sum(Complex* num);
+    float subtract(Complex* num);
+    float multiply(Complex* num);
+    float divide(Complex* num);
+    std::string getRectangularForm();
+    std::string getPolarForm();
  private:
     float real_part;
     float imaginary_part;
