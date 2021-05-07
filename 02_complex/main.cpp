@@ -86,7 +86,7 @@ void Complex::printPolarForm() {
 
 class ArrayComplex {
  public:
-  explicit ArrayComplex(int num);
+  explicit ArrayComplex(int size);
   ~ArrayComplex();
   int getSize();
   void addComplexNumber(Complex * complex_number, int index);
