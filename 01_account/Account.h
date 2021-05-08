@@ -19,5 +19,4 @@ class Account {
     float balance;
 };
 
-
 #endif //ACCOUNT_ACCOUNT_H
