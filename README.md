@@ -1,16 +1,6 @@
 # Object-oriented programs in C++
  
-## Usage - single main.cpp file
-Compile:
-```console
-foo@bar ~ % g++ main.cpp <executable_name>.out
-```
-Execute:
-```console
-foo@bar ~ % ./<executable_name>.out
-```
-
-## Usage - multiple .cpp files
+## Usage
 
 - Pre-requisite: [CMake](https://cmake.org/download/) installed.
 
