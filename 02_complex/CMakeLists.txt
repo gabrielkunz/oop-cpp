@@ -4,4 +4,4 @@ project(complex)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(complex
-        main.cpp Complex.cpp Complex.h)
+        main.cpp Complex.cpp Complex.h ArrayComplex.cpp ArrayComplex.h)
