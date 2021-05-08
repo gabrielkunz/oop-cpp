@@ -31,11 +31,6 @@
 *.out
 *.app
 
-# User
-.DS_Store
-.vscode/*
-*/.idea/
-
 # Default ignored files
 */shelf/
 */workspace.xml
@@ -44,3 +39,10 @@
 */dataSources.local.xml
 # Editor-based HTTP Client requests
 */httpRequests/
+
+# User ignore
+.DS_Store
+.vscode/*
+*/.idea/
+*/cmake-build-debug/
+
