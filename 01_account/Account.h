@@ -9,14 +9,17 @@
 
 class Account {
  public:
-    Account(std::string acc_owner, int number_of_accounts);
-    void Credit(float amount);
-    void Debit(float amount);
-    void Transfer(Account* receiving_acc, float amount);
- private:
-    std::string acc_owner;
-    int acc_number;
-    float balance;
+  Account(std::string acc_owner, int acc_number);
+  void Credit(float amount);
+  void Debit(float amount);
+  void Transfer(Account* receiving_acc, float amount);
+  int getAccountNumber();
+  void printAccountDetails();
+  virtual void updateAccount() = 0;
+ protected:
+  std::string acc_owner;
+  int acc_number;
+  float balance;
 };
 
 #endif //ACCOUNT_ACCOUNT_H
