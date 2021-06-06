@@ -48,6 +48,30 @@ void Complex::subtract(Complex * complex_number) {
   imaginary_part -= complex_number->imaginary_part;
 }
 
+void Complex::multiply(Complex *complex_number) {
+  float abs1 = getAbsoluteValue();
+  float phase1 = getPhase();
+  float abs2 = complex_number->getAbsoluteValue();
+  float phase2 = complex_number->getPhase();
+  float result_abs = abs1 * abs2;
+  float result_phase = phase1 + phase2;
+
+  real_part = result_abs * cos(result_phase);
+  imaginary_part = result_abs * sin(result_phase);
+}
+
+void Complex::divide(Complex *complex_number) {
+  float abs1 = getAbsoluteValue();
+  float phase1 = getPhase();
+  float abs2 = complex_number->getAbsoluteValue();
+  float phase2 = complex_number->getPhase();
+  float result_abs = abs1 / abs2;
+  float result_phase = phase1 - phase2;
+
+  real_part = result_abs * cos(result_phase);
+  imaginary_part = result_abs * sin(result_phase);
+}
+
 void Complex::printRectangularForm() {
   std::cout << "Rectangular form: (";
   std::cout << std::to_string(getRealPart());
