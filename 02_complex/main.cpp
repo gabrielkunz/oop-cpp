@@ -12,6 +12,7 @@ int main() {
   auto * c_num3 = new Complex(5, 3);
   auto * c_num4 = new Complex(-4, 7);
   auto * c_num5 = new Complex(2, -9);
+  auto * result = new Complex();
 
   complex_numbers->addComplexNumber(c_num1, 0);
   complex_numbers->addComplexNumber(c_num2, 1);
@@ -22,7 +23,9 @@ int main() {
   std::cout << "Array size: ";
   std::cout << std::to_string(complex_numbers->getSize());
   std::cout << std::endl;
+  std::cout << "Array in rectangular form: " << std::endl;
   complex_numbers->printArrayRectangular();
+  std::cout << "Array in polar form: " << std::endl;
   complex_numbers->printArrayPolar();
 
   int index_greater_absvalue = complex_numbers->getGreaterAbsValueIndex();
@@ -35,6 +38,17 @@ int main() {
   std::cout << "The greater absolute value in the array: ";
   std::cout << std::to_string(greater_absvalue_num->getAbsoluteValue());
   std::cout << std::endl;
+
+  // Sum
+  result = c_num5->sum(c_num1);
+  std::cout << std::endl;
+  c_num5->printRectangularForm();
+  std::cout << " + ";
+  c_num1->printRectangularForm();
+  std::cout << " = ";
+  result->printRectangularForm();
+  std::cout << std::endl;
+  delete result;
 
   return 0;
 }

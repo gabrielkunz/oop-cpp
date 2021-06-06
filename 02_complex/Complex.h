@@ -12,13 +12,14 @@ class Complex {
  public:
   Complex();
   Complex(float real_part, float imaginary_part);
+  ~Complex();
   float getRealPart();
   float getImaginaryPart();
   float getAbsoluteValue();
   float getPhase();
   void setRealPart(float real_part);
   void setImaginaryPart(float imaginary_part);
-  void sum(Complex * complex_number);
+  Complex * sum(Complex * complex_number);
   void subtract(Complex * complex_number);
   void multiply(Complex * complex_number);
   void divide(Complex * complex_number);

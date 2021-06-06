@@ -14,6 +14,11 @@ Complex::Complex(float real_part, float imaginary_part) {
   setImaginaryPart(imaginary_part);
 }
 
+Complex::~Complex(){
+  std::cout << "Object deleted.";
+  std::cout << std::endl;
+}
+
 float Complex::getRealPart() {
   return real_part;
 }
@@ -38,9 +43,12 @@ void Complex::setImaginaryPart(float imaginary_part) {
   this->imaginary_part = imaginary_part;
 }
 
-void Complex::sum(Complex * complex_number) {
-  real_part += complex_number->real_part;
-  imaginary_part += complex_number->imaginary_part;
+Complex * Complex::sum(Complex * complex_number) {
+  float result_real = this->real_part + complex_number->real_part;
+  float result_imaginary = this->imaginary_part - complex_number->imaginary_part;
+
+  auto result = new Complex(result_real, result_imaginary);
+  return result;
 }
 
 void Complex::subtract(Complex * complex_number) {
@@ -73,17 +81,17 @@ void Complex::divide(Complex *complex_number) {
 }
 
 void Complex::printRectangularForm() {
-  std::cout << "Rectangular form: (";
+  std::cout << "(";
   std::cout << std::to_string(getRealPart());
   std::cout << ", ";
   std::cout << std::to_string(getImaginaryPart());
-  std::cout << ")" << std::endl;
+  std::cout << "i)";
 }
 
 void Complex::printPolarForm() {
-  std::cout << "Polar form: (";
+  std::cout << "(";
   std::cout << std::to_string(getAbsoluteValue());
-  std::cout << ", ";
+  std::cout << " ∠ ";
   std::cout << std::to_string(getPhase() * 180/3.1415926535);
-  std::cout << ")" << std::endl;
+  std::cout << "º)" << std::endl;
 }

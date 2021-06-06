@@ -25,12 +25,14 @@ int ArrayComplex::getSize() {
 void ArrayComplex::printArrayRectangular() {
   for (int i = 0; i < size; i++) {
     elements[i].printRectangularForm();
+    std::cout << std::endl;
   }
 }
 
 void ArrayComplex::printArrayPolar() {
   for (int i = 0; i < size; i++) {
     elements[i].printPolarForm();
+    std::cout << std::endl;
   }
 }
 
