@@ -93,5 +93,5 @@ void Complex::printPolarForm() {
   std::cout << std::to_string(getAbsoluteValue());
   std::cout << " ∠ ";
   std::cout << std::to_string(getPhase() * 180/3.1415926535);
-  std::cout << "º)" << std::endl;
+  std::cout << "º)";
 }
