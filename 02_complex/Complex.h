@@ -20,9 +20,9 @@ class Complex {
   void setRealPart(float real_part);
   void setImaginaryPart(float imaginary_part);
   Complex * sum(Complex * complex_number);
-  void subtract(Complex * complex_number);
-  void multiply(Complex * complex_number);
-  void divide(Complex * complex_number);
+  Complex * subtract(Complex * complex_number);
+  Complex * multiply(Complex * complex_number);
+  Complex * divide(Complex * complex_number);
   void printRectangularForm();
   void printPolarForm();
  private:

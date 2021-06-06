@@ -50,5 +50,38 @@ int main() {
   std::cout << std::endl;
   delete result;
 
+  // Subtract
+  result = c_num5->subtract(c_num2);
+  std::cout << std::endl;
+  c_num5->printRectangularForm();
+  std::cout << " - ";
+  c_num2->printRectangularForm();
+  std::cout << " = ";
+  result->printRectangularForm();
+  std::cout << std::endl;
+  delete result;
+
+  // Multiply
+  result = c_num5->multiply(c_num3);
+  std::cout << std::endl;
+  c_num5->printRectangularForm();
+  std::cout << " * ";
+  c_num3->printRectangularForm();
+  std::cout << " = ";
+  result->printRectangularForm();
+  std::cout << std::endl;
+  delete result;
+
+  // Divide
+  result = c_num5->divide(c_num4);
+  std::cout << std::endl;
+  c_num5->printRectangularForm();
+  std::cout << " / ";
+  c_num4->printRectangularForm();
+  std::cout << " = ";
+  result->printRectangularForm();
+  std::cout << std::endl;
+  delete result;
+
   return 0;
 }

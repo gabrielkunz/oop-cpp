@@ -45,39 +45,48 @@ void Complex::setImaginaryPart(float imaginary_part) {
 
 Complex * Complex::sum(Complex * complex_number) {
   float result_real = this->real_part + complex_number->real_part;
+  float result_imaginary = this->imaginary_part + complex_number->imaginary_part;
+
+  auto result = new Complex(result_real, result_imaginary);
+  return result;
+}
+
+Complex * Complex::subtract(Complex * complex_number) {
+  float result_real = this->real_part - complex_number->real_part;
   float result_imaginary = this->imaginary_part - complex_number->imaginary_part;
 
   auto result = new Complex(result_real, result_imaginary);
   return result;
 }
 
-void Complex::subtract(Complex * complex_number) {
-  real_part -= complex_number->real_part;
-  imaginary_part -= complex_number->imaginary_part;
-}
-
-void Complex::multiply(Complex *complex_number) {
+Complex * Complex::multiply(Complex *complex_number) {
   float abs1 = getAbsoluteValue();
   float phase1 = getPhase();
   float abs2 = complex_number->getAbsoluteValue();
   float phase2 = complex_number->getPhase();
+
   float result_abs = abs1 * abs2;
   float result_phase = phase1 + phase2;
+  float result_real = result_abs * cos(result_phase);
+  float result_imaginary = result_abs * sin(result_phase);
 
-  real_part = result_abs * cos(result_phase);
-  imaginary_part = result_abs * sin(result_phase);
+  auto result = new Complex(result_real, result_imaginary);
+  return result;
 }
 
-void Complex::divide(Complex *complex_number) {
+Complex * Complex::divide(Complex *complex_number) {
   float abs1 = getAbsoluteValue();
   float phase1 = getPhase();
   float abs2 = complex_number->getAbsoluteValue();
   float phase2 = complex_number->getPhase();
+
   float result_abs = abs1 / abs2;
   float result_phase = phase1 - phase2;
+  float result_real = result_abs * cos(result_phase);
+  float result_imaginary = result_abs * sin(result_phase);
 
-  real_part = result_abs * cos(result_phase);
-  imaginary_part = result_abs * sin(result_phase);
+  auto result = new Complex(result_real, result_imaginary);
+  return result;
 }
 
 void Complex::printRectangularForm() {
