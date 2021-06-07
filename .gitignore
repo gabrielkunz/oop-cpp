@@ -45,3 +45,5 @@
 .vscode/*
 */.idea/
 */cmake-build-debug/
+03_complex_gui/WxComplex/obj/Debug/
+03_complex_gui/WxComplex/WxComplex.depend
