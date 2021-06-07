@@ -16,6 +16,8 @@
 #include <wx/statusbr.h>
 //*)
 
+#include <Complex.h>
+
 class WxComplexFrame: public wxFrame
 {
     public:
