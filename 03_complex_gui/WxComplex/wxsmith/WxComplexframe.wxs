@@ -2,6 +2,7 @@
 <wxsmith>
 	<object class="wxFrame" name="WxComplexFrame">
 		<title>Complex Number Calculator</title>
+		<icon>C:\Users\Gabriel\Documents\GitHub\oop-cpp\03_complex_gui\WxComplex\assets\icon.png</icon>
 		<pos>-1,-1</pos>
 		<size>417,179</size>
 		<bg>wxSYS_COLOUR_WINDOW</bg>

@@ -11,6 +11,9 @@
 #include <wx/msgdlg.h>
 
 //(*InternalHeaders(WxComplexFrame)
+#include <wx/bitmap.h>
+#include <wx/icon.h>
+#include <wx/image.h>
 #include <wx/intl.h>
 #include <wx/settings.h>
 #include <wx/string.h>
@@ -77,6 +80,11 @@ WxComplexFrame::WxComplexFrame(wxWindow* parent,wxWindowID id)
     SetClientSize(wxSize(417,179));
     Move(wxPoint(-1,-1));
     SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW));
+    {
+    	wxIcon FrameIcon;
+    	FrameIcon.CopyFromBitmap(wxBitmap(wxImage(_T("C:\\Users\\Gabriel\\Documents\\GitHub\\oop-cpp\\03_complex_gui\\WxComplex\\assets\\icon.png"))));
+    	SetIcon(FrameIcon);
+    }
     ButtonSum = new wxButton(this, ID_BUTTON_SUM, _("+"), wxPoint(16,16), wxSize(30,30), 0, wxDefaultValidator, _T("ID_BUTTON_SUM"));
     ButtonSub = new wxButton(this, ID_BUTTON_SUB, _("-"), wxPoint(16,56), wxSize(30,30), 0, wxDefaultValidator, _T("ID_BUTTON_SUB"));
     ButtonMul = new wxButton(this, ID_BUTTON_MUL, _("X"), wxPoint(16,96), wxSize(30,30), 0, wxDefaultValidator, _T("ID_BUTTON_MUL"));
