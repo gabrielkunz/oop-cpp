@@ -1,30 +1,84 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
-    <object class="wxFrame" name="WxComplexFrame">
-        <object class="wxMenuBar" variable="MenuBar1" member="no">
-            <object class="wxMenu" variable="Menu1" member="no">
-                <label>&amp;File</label>
-                <object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
-                    <label>Quit</label>
-                    <accel>Alt-F4</accel>
-                    <help>Quit the application</help>
-                    <handler function="OnQuit" entry="EVT_MENU" />
-                </object>
-            </object>
-            <object class="wxMenu" variable="Menu2" member="no">
-                <label>Help</label>
-                <object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
-                    <label>About</label>
-                    <accel>F1</accel>
-                    <help>Show info about this application</help>
-                    <handler function="OnAbout" entry="EVT_MENU" />
-                </object>
-            </object>
-        </object>
-        <object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
-            <fields>1</fields>
-            <widths>-1</widths>
-            <styles>wxSB_NORMAL</styles>
-        </object>
-    </object>
+	<object class="wxFrame" name="WxComplexFrame">
+		<pos>-1,-1</pos>
+		<size>1217,772</size>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxButton" name="ID_BUTTON_SUM" variable="ButtonSum" member="yes">
+			<label>+</label>
+			<pos>24,40</pos>
+			<size>40,40</size>
+			<handler function="OnButtonSumClick1" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_SUB" variable="ButtonSub" member="yes">
+			<label>-</label>
+			<pos>24,96</pos>
+			<size>40,40</size>
+			<handler function="OnButtonSubClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="ButtonMul" member="yes">
+			<label>X</label>
+			<pos>24,152</pos>
+			<size>40,40</size>
+			<handler function="OnButtonMulClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="ButtonDiv" member="yes">
+			<label>/</label>
+			<pos>24,208</pos>
+			<size>40,40</size>
+			<handler function="OnButtonDivClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+			<pos>96,160</pos>
+			<size>312,5</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_NUM1_REAL" variable="TextCtrlNum1Real" member="yes">
+			<pos>104,48</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_NUM2_REAL" variable="TextCtrlNum2Real" member="yes">
+			<pos>104,104</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_NUM1_IMG" variable="TextCtrlNum1Img" member="yes">
+			<pos>264,48</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_NUM2_IMG" variable="TextCtrlNum2Img" member="yes">
+			<pos>264,104</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT_RES_REAL" variable="StaticTextResReal" member="yes">
+			<label></label>
+			<pos>112,224</pos>
+			<size>104,20</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT_RES_IMG" variable="StaticTextResImg" member="yes">
+			<label></label>
+			<pos>240,224</pos>
+			<size>152,20</size>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
 </wxsmith>

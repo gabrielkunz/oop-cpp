@@ -1,5 +1,9 @@
-#ifndef COMPLEX_H_INCLUDED
-#define COMPLEX_H_INCLUDED
+//
+// Created by Kunz, Gabriel on 07/05/21.
+//
+
+#ifndef COMPLEX_COMPLEX_H
+#define COMPLEX_COMPLEX_H
 
 #include <math.h>
 #include <iostream>
@@ -26,4 +30,4 @@ class Complex {
   float imaginary_part;
 };
 
-#endif // COMPLEX_H_INCLUDED
+#endif //COMPLEX_COMPLEX_H
