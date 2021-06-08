@@ -13,10 +13,8 @@
 //(*Headers(WxComplexFrame)
 #include <wx/button.h>
 #include <wx/frame.h>
-#include <wx/menu.h>
 #include <wx/statline.h>
 #include <wx/stattext.h>
-#include <wx/statusbr.h>
 #include <wx/textctrl.h>
 //*)
 
@@ -45,8 +43,8 @@ class WxComplexFrame: public wxFrame
         //(*Identifiers(WxComplexFrame)
         static const long ID_BUTTON_SUM;
         static const long ID_BUTTON_SUB;
-        static const long ID_BUTTON1;
-        static const long ID_BUTTON2;
+        static const long ID_BUTTON_MUL;
+        static const long ID_BUTTON_DIV;
         static const long ID_STATICLINE1;
         static const long ID_TEXTCTRL_NUM1_REAL;
         static const long ID_TEXTCTRL_NUM2_REAL;
@@ -54,9 +52,15 @@ class WxComplexFrame: public wxFrame
         static const long ID_TEXTCTRL_NUM2_IMG;
         static const long ID_STATICTEXT_RES_REAL;
         static const long ID_STATICTEXT_RES_IMG;
-        static const long idMenuQuit;
-        static const long idMenuAbout;
-        static const long ID_STATUSBAR1;
+        static const long ID_STATICTEXT1;
+        static const long ID_STATICTEXT2;
+        static const long ID_STATICTEXT3;
+        static const long ID_STATICTEXT4;
+        static const long ID_STATICTEXT5;
+        static const long ID_STATICTEXT6;
+        static const long ID_STATICTEXT7;
+        static const long ID_STATICTEXT8;
+        static const long ID_STATICTEXT9;
         //*)
 
         //(*Declarations(WxComplexFrame)
@@ -65,9 +69,17 @@ class WxComplexFrame: public wxFrame
         wxButton* ButtonSub;
         wxButton* ButtonSum;
         wxStaticLine* StaticLine1;
+        wxStaticText* StaticText1;
+        wxStaticText* StaticText2;
+        wxStaticText* StaticText3;
+        wxStaticText* StaticText4;
+        wxStaticText* StaticText5;
+        wxStaticText* StaticText6;
+        wxStaticText* StaticText7;
+        wxStaticText* StaticText8;
+        wxStaticText* StaticText9;
         wxStaticText* StaticTextResImg;
         wxStaticText* StaticTextResReal;
-        wxStatusBar* StatusBar1;
         wxTextCtrl* TextCtrlNum1Img;
         wxTextCtrl* TextCtrlNum1Real;
         wxTextCtrl* TextCtrlNum2Img;
