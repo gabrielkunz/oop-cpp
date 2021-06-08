@@ -151,16 +151,75 @@ void WxComplexFrame::OnButtonSumClick(wxCommandEvent& event)
 
 void WxComplexFrame::OnButtonSubClick(wxCommandEvent& event)
 {
+    double num1_real = 0;
+    TextCtrlNum1Real->GetValue().ToDouble(&num1_real);
+    double num1_img = 0;
+    TextCtrlNum1Img->GetValue().ToDouble(&num1_img);
+    double num2_real = 0;
+    TextCtrlNum2Real->GetValue().ToDouble(&num2_real);
+    double num2_img = 0;
+    TextCtrlNum2Img->GetValue().ToDouble(&num2_img);
 
+    auto * num1 = new Complex(num1_real, num1_img);
+    auto * num2 = new Complex(num2_real, num2_img);
+
+    auto * result = new Complex();
+    result = num1->subtract(num2);
+
+    StaticTextResReal->SetLabel(std::to_string(result->getRealPart()));
+    StaticTextResImg->SetLabel(std::to_string(result->getImaginaryPart()));
+
+    delete num1;
+    delete num2;
+    delete result;
 }
 
 void WxComplexFrame::OnButtonMulClick(wxCommandEvent& event)
 {
+    double num1_real = 0;
+    TextCtrlNum1Real->GetValue().ToDouble(&num1_real);
+    double num1_img = 0;
+    TextCtrlNum1Img->GetValue().ToDouble(&num1_img);
+    double num2_real = 0;
+    TextCtrlNum2Real->GetValue().ToDouble(&num2_real);
+    double num2_img = 0;
+    TextCtrlNum2Img->GetValue().ToDouble(&num2_img);
 
+    auto * num1 = new Complex(num1_real, num1_img);
+    auto * num2 = new Complex(num2_real, num2_img);
+
+    auto * result = new Complex();
+    result = num1->multiply(num2);
+
+    StaticTextResReal->SetLabel(std::to_string(result->getRealPart()));
+    StaticTextResImg->SetLabel(std::to_string(result->getImaginaryPart()));
+
+    delete num1;
+    delete num2;
+    delete result;
 }
 
 void WxComplexFrame::OnButtonDivClick(wxCommandEvent& event)
 {
+    double num1_real = 0;
+    TextCtrlNum1Real->GetValue().ToDouble(&num1_real);
+    double num1_img = 0;
+    TextCtrlNum1Img->GetValue().ToDouble(&num1_img);
+    double num2_real = 0;
+    TextCtrlNum2Real->GetValue().ToDouble(&num2_real);
+    double num2_img = 0;
+    TextCtrlNum2Img->GetValue().ToDouble(&num2_img);
 
+    auto * num1 = new Complex(num1_real, num1_img);
+    auto * num2 = new Complex(num2_real, num2_img);
+
+    auto * result = new Complex();
+    result = num1->divide(num2);
+
+    StaticTextResReal->SetLabel(std::to_string(result->getRealPart()));
+    StaticTextResImg->SetLabel(std::to_string(result->getImaginaryPart()));
+
+    delete num1;
+    delete num2;
+    delete result;
 }
-
