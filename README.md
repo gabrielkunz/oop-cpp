@@ -27,3 +27,8 @@ Bank account class with methods to perform credit, debit and transfer operations
 
 ## Program 2: 02_complex/
 Complex number class with methods to get polynomial and polar parts and perform mathematical operations.
+
+## Program 3: 03_complex_gui/
+GUI interface for a complex number calculator using wxWidgets and Complex class. CMake was not written for this projection, it is necessary to build the project and the wxWdigets 3.1.5 binaries to run the program.
+
+
